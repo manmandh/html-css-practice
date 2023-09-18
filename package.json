@@ -10,9 +10,16 @@
   "license": "MIT",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.9.3",
+    "eslint": ">=5.16.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
     "parcel": "^2.9.3",
     "posthtml-doctype": "^1.1.1",
-    "posthtml-include": "^1.7.4"
+    "posthtml-include": "^1.7.4",
+    "prettier": "^3.0.3"
   },
   "dependencies": {
     "@parcel/transformer-posthtml": "^2.9.3",
@@ -25,7 +32,24 @@
   "homepage": "https://github.com/manmandh/testScss#readme",
   "scripts": {
     "build": "babel src -d lib",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint .",
+    "format": "prettier --write ."
   },
+  
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  
   "keywords": []
+  
 }
