@@ -24,7 +24,8 @@
   },
   "homepage": "https://github.com/manmandh/testScss#readme",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src -d lib",
+    "test": "jest"
   },
   "keywords": []
 }
