@@ -1,32 +1,12 @@
-header{
-  padding: 40px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  nav{
+ul {
 
-    display: flex;
-    align-items: center;
-
-   
-
-      ul {
-
-        display: flex;
-        flex-direction: row;
-        
-        
-        li {
-          list-style-type: none;
-          margin: 0 20px;
-          row-gap: 15px;
-          text-transform: capitalize;
-        }
-
-        a {
-          text-decoration: none;
-        }
-
-      }
+  li {
+    list-style-type: none;
   }
+
+  a {
+    text-decoration: none;
+  }
+
+
 }
